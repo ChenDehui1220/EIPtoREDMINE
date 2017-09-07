@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+
+    "name": "EIP to Redmine Tool",
+    "description": "",
+    "version": "0.0.0.1",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "tabs", "http://*.hq.hiiir/*",
+        "storage"
+    ],
+    "content_scripts": [{
+        "matches": ["http://*.hq.hiiir/*"],
+        "js": ["jquery.js", "app.js"],
+        "run_at": "document_start"
+    }],
+    "web_accessible_resources": []
+}
